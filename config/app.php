@@ -78,7 +78,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+//    'locale' => 'en',
+    'locale' => 'zh-CN',
 
     /*
     |--------------------------------------------------------------------------
@@ -121,7 +122,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'daily'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -136,7 +137,7 @@ return [
     |
     */
 
-    'providers' => [
+    'providers' => array(
 
         /*
          * Laravel Framework Service Providers...
@@ -163,8 +164,27 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
+        Overtrue\LaravelLang\TranslationServiceProvider::class,
+        Overtrue\LaravelWeChat\ServiceProvider::class,
+        Overtrue\LaravelSocialite\ServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+//        Jenssegers\Mongodb\MongodbServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+       // Aws\Laravel\AwsServiceProvider::class,
+        //Torann\GeoIP\GeoIPServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+
+
         /*
          * Package Service Providers...
          */
@@ -178,7 +198,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-    ],
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -226,7 +246,19 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
+        'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
+        'Socialite' => Overtrue\LaravelSocialite\Socialite::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+        //'AWS' => Aws\Laravel\AwsFacade::class,
+        //'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
+        'Ip'  => 'Zhuzhichao\IpLocationZh\Ip'
 
     ],
 
